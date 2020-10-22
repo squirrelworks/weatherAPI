@@ -10,7 +10,7 @@ loadData('http://www.7timer.info/bin/api.pl?lon=10.06&lat=56.94&unit=Metric&prod
 //Load Data function
 function loadData(myUrl) {
 
-  console.log("fetching data hurra");
+  console.log("fetching data hurra hurra");
 
 
   fetch(myUrl)
