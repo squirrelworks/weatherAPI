@@ -12,7 +12,7 @@ function loadData(){
     console.log("fetching data");
     app.textContent="Loading data";
 
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=civillight&output=json')
     .then((response) => {
         //return response.text();
         return response.json();
@@ -20,7 +20,7 @@ function loadData(){
       .then((data) => {
         // do something with 'data'
         //let myData=JSON.parse(data);
-        buildView(data.message);
+        buildView(data);
       })
       .catch(
 
@@ -28,6 +28,6 @@ function loadData(){
 }
 
 // dom setup
-function buildView(myUrl){
-    app.textContent=myUrl;
+function buildView(myData){
+    app.textContent=myData.dataseries[0].weather;
 }
